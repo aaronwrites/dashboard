@@ -6,7 +6,7 @@ import SidebarSection from "./SidebarSection";
 
 const Sidebar = () => {
 	return (
-		<div className="bg-sidebar text-sidebar-foreground p-4 sticky top-4 overflow-y-scroll">
+		<div className="bg-sidebar text-sidebar-foreground p-4 h-full overflow-y-auto">
 			<Logo />
 			<WorkspaceToggle />
 			<SidebarSection title="Dashboards">

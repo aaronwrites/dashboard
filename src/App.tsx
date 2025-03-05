@@ -1,12 +1,18 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AppLayout from "./layouts/AppLayout";
 import Dashboard from "./pages/Dashboard";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Settings from "./pages/Settings";
 
 function App() {
 	return (
-		<main className="min-h-screen grid gap-4 grid-cols-[250px_1fr]">
-			<Sidebar />
-			<Dashboard />
-		</main>
+		<BrowserRouter>
+			<Routes>
+				<Route element={<AppLayout />}>
+					<Route path="/" element={<Dashboard />} />
+					<Route path="/settings" element={<Settings />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
